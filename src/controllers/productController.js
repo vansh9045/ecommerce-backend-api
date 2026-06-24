@@ -3,6 +3,8 @@ const Product = require("../models/productModel");
 // Create Product
 const createProduct = async (req, res) => {
   try {
+      console.log(req.body);
+      console.log(req.user);
     const product = await Product.create(req.body);
 
     res.status(201).json({

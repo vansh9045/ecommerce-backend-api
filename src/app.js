@@ -1,3 +1,4 @@
+const userRoutes = require("./routes/userRoutes");
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
@@ -18,5 +19,6 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/products", productRoutes);
+app.use("/api/users", userRoutes);
 
 module.exports = app;
